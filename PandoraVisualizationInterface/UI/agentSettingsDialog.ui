@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AgentSettingsDialog</class>
+ <widget class="QDialog" name="AgentSettingsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>435</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Agent Settings</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/icon.png</normaloff>../icons/icon.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widget_2" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Figure</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QListWidget" name="shapeList">
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="textElideMode">
+            <enum>Qt::ElideNone</enum>
+           </property>
+           <property name="viewMode">
+            <enum>QListView::ListMode</enum>
+           </property>
+           <property name="uniformItemSizes">
+            <bool>true</bool>
+           </property>
+           <property name="batchSize">
+            <number>100</number>
+           </property>
+           <property name="sortingEnabled">
+            <bool>false</bool>
+           </property>
+           <item>
+            <property name="text">
+             <string>Triangle</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>icons/triangle.png</normaloff>icons/triangle.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Quad</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>icons/quad.png</normaloff>icons/quad.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Penthagon</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>icons/penthagon.png</normaloff>icons/penthagon.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Hexagon</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>icons/hexagon.png</normaloff>icons/hexagon.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Circle</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>icons/circle.png</normaloff>icons/circle.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Tetrahedron</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>icons/tetra.png</normaloff>icons/tetra.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Pyramid</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>icons/pyramid.png</normaloff>icons/pyramid.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Cone</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>icons/cone.png</normaloff>icons/cone.png</iconset>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_3" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Color</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QListWidget" name="colorList">
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>AgentSettingsDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>227</x>
+     <y>415</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,30 @@
+#ifndef STATICRASTER_H
+#define STATICRASTER_H
+
+#include <vector>
+
+using namespace std;
+
+class StaticRaster
+{
+public:
+    StaticRaster(int width, int height);
+
+    void setCell(int x, int y, int value);
+    void setMinValue(int value);
+    void setMaxValue(int value);
+
+    int getCell(int x, int y);
+    int getMinValue();
+    int getMaxValue();
+
+    int getWidth();
+    int getHeight();
+
+private:
+    vector<vector<int>> map;
+    int width, heigth;
+    int minValue, maxValue;
+};
+
+#endif // STATICRASTER_H
